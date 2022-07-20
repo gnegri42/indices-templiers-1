@@ -14,6 +14,8 @@ import lettre from "../../images/LETTRE_TEMP.png"
 import cryptex from "../../images/CRYPTEX.png"
 import croix from "../../images/CROIX.png"
 import cartes from "../../images/CARTES.png"
+import poeme from "../../images/POEME.png"
+import pierre from "../../images/PIERRE.png"
 
 const indicesData = [
     {
@@ -204,7 +206,7 @@ const indicesData = [
         indice3: "Un chat… un alligator…",
         indice4: "Un éléphant....",
         reponse: "4 animaux, 4 cartes, 4 chiffres",
-        url: `https://images.unsplash.com/photo-1575908539629-62b3f98d7b3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1603&q=80`,
+        url: `${poeme}`,
         enigme: 5
     },
     {
@@ -212,7 +214,7 @@ const indicesData = [
         indice1: "Cette pierre doit avoir un lien avec ces symboles d’alchimie",
         indice2: "Les 5 indices avec des potions de la moins remplie à la plus remplie doivent donner un ordre",
         indice3: "Peut-être qu'en passant la pierre sur les bons symboles, dans le bon ordre...",
-        url: `https://images.unsplash.com/photo-1575908539629-62b3f98d7b3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1603&q=80`,
+        url: `${pierre}`,
         enigme: 6
     },
     {

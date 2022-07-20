@@ -15,7 +15,7 @@ const stepCodes = [
         step: 3
     },
     {
-        text: "Quel code avez-vous trouvé pour le Cryptex ?",
+        text: "Quel code avez-vous trouvé pour le Cryptex (à écrire en majuscules sans espaces) ?",
         code: "FLAMEL",
         step: 4
     },
