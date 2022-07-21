@@ -50,10 +50,10 @@ function App() {
 	const indicesList = indicesFilter.map((object, index) => {
 		return(
 			<div key={index}>
-				<img className="object-image" src={object.url} alt={object.name} onClick={() => displayObjectName(object.name)}></img>
+				<img className="object-image" src={object.url} alt={object.name} onClick={() => displayObjectName(object.className)}></img>
 				<p>{object.name}</p>
-					<div className="indice-container hidden flex-js" data-indice={object.name} >
-						<button className="closeButton" onClick={() => displayObjectName(object.name)}>X</button>
+					<div className="indice-container hidden flex-js" data-indice={object.className} >
+						<button className="closeButton" onClick={() => displayObjectName(object.className)}>X</button>
 						{object.indice1 &&
 							<details>
 								<summary>Indice 1</summary>

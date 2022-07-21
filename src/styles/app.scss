@@ -21,6 +21,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     justify-items: center;
+    z-index: 50;
 }
 
 .objects img {
@@ -30,6 +31,7 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     cursor: pointer;
+    z-index: 50;
 }
 
 .object {
