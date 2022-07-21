@@ -48,7 +48,7 @@ const indicesData = [
         className: 'sac',
         indice1: "Cherchez un moyen de l’ouvrir, peut-être grâce aux effets personnels de J.Wright",
         indice2: "Regardez ! Une flamme sur un cadenas !",
-        indice3: "Vous devriez peut être regarder ce briquet de plus près",
+        indice3: "Vous devriez peut-être regarder ce briquet de plus près",
         url: `${sac}`,
         enigme: 1
     },
@@ -167,7 +167,7 @@ const indicesData = [
     {
         name: 'Lettre templière',
         className: 'lettre',
-        indice1: "Ce texte templier, même décodé semble écrit en latin, il ne sera pas utile de le déchiffrer intégralement",
+        indice1: "Ce texte templier, même décodé, semble écrit en latin. Il ne sera pas utile de le déchiffrer intégralement",
         indice2: "Grâce à la croix et à la roue de décryptage, vous devriez pouvoir trouver 7 lettres",
         indice3: "La croix comporte les mêmes triangles que ceux présents en haut et en bas du texte",
         indice4: "Elle s’encastre très bien dans les décorations autour du texte",
@@ -231,7 +231,7 @@ const indicesData = [
         indice2: "Plusieurs animaux sont évoqués",
         indice3: "Un chat… un alligator…",
         indice4: "Un éléphant....",
-        reponse: "4 animaux, 4 cartes, 4 chiffres",
+        reponse: "4 animaux, 4 cartes, 4 chiffres. Ou peut-être seulement 3 animaux, en fonction du cadenas.",
         url: `${poeme}`,
         enigme: 5
     },
