@@ -7,15 +7,33 @@ function App() {
 	var [openedObject, setOpenedObject] = useState(null);
 	var [showAnswer, setShowAnser] = useState(false);
 	const indicesFilter = indicesData.filter(indice => (indice.enigme === step));
+	const [didLoad, setDidLoad] = useState(false);
 
 	useEffect(() => {
+		function closeWithEscape(e) {
+			const keyPressed = e.key;
+			if (keyPressed === "Escape" && openedObject)
+			{
+				const indiceContainer = document.querySelector("[data-indice=" + openedObject + "]")
+				indiceContainer.classList.add("hidden");
+			}
+		}
+
 		// Close popup with escape
         document.addEventListener("keydown", closeWithEscape, false);
-    
+		if (!didLoad) {
+			setStep(Number(localStorage.getItem('step', step)));
+			setDidLoad(true);
+		}
+		if (step > 1) {
+			localStorage.setItem('step', step.toString());
+			console.log(step);
+		}
         return () => {
 			document.removeEventListener("keydown", closeWithEscape, false);
         };
-    });
+		
+    }, [openedObject, didLoad, step]);
 
 	function displayObjectName(object) {
 		setOpenedObject(object);
@@ -28,15 +46,6 @@ function App() {
 			setOpenedObject(null);
 		}
 	}
-
-	function closeWithEscape(e) {
-        const keyPressed = e.key;
-        if (keyPressed === "Escape" && openedObject)
-		{
-			const indiceContainer = document.querySelector("[data-indice=" + openedObject + "]")
-			indiceContainer.classList.add("hidden");
-		}
-    }
 
 	function updateStepUp() {
 		setStep(step + 1);
@@ -76,6 +85,12 @@ function App() {
 							<details>
 								<summary>Indice 4</summary>
 								<p>{object.indice4}</p>
+							</details>
+						}
+						{object.indice5 &&
+							<details>
+								<summary>Indice 5</summary>
+								<p>{object.indice5}</p>
 							</details>
 						}
 						{object.reponse &&
