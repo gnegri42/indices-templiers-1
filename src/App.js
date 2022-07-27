@@ -18,16 +18,22 @@ function App() {
 				indiceContainer.classList.add("hidden");
 			}
 		}
+		console.log("WTF " + step);
 
 		// Close popup with escape
         document.addEventListener("keydown", closeWithEscape, false);
 		if (!didLoad) {
 			setStep(Number(localStorage.getItem('step', step)));
 			setDidLoad(true);
+			console.log("WTF " + step);
 		}
-		if (step > 1) {
+		else if (step > 1) {
 			localStorage.setItem('step', step.toString());
-			console.log(step);
+			console.log("First : " + step);
+		}
+		else {
+			setStep(1);
+			console.log("Second : " + step);
 		}
         return () => {
 			document.removeEventListener("keydown", closeWithEscape, false);
@@ -120,7 +126,7 @@ function App() {
 				}
 				{indicesList}
 			</div>
-			<StepButtons actualStep={step} updateStepUp={updateStepUp} updateStepDown={updateStepDown} />
+			<StepButtons actualStep={step || 1} updateStepUp={updateStepUp} updateStepDown={updateStepDown} />
 		</div>
 	);
 }
